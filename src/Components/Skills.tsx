@@ -6,24 +6,24 @@ function Skills() {
         <div className="skills-container" id="Skills">
             <span className="subtitle">Skills Summary</span>
             <div className="skills-list">
-                <ul>
+                <div className="skill-item"> 
                     {
                         skillList.map(
                             (skill, index) => (
-                                <span key={index}>
-                                    <li >
+                                <span key={index} className="skill">
+                                    <span >
                                         {skill}
-                                    </li>
+                                    </span >
                                     {index === (skillList.length - 1) ?
                                         <></> :
-                                        <span>|</span>
+                                        <span className="skill-separator">|</span>
                                     }
                                 </span>
 
                             )
                         )
                     }
-                </ul>
+                </div>
             </div>
         </div>
     )

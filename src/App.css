@@ -104,6 +104,7 @@
 }
 
 /*Skills Section Styling*/
+
 .skills-container {
     display: flex;
     flex-direction: column;
@@ -113,26 +114,27 @@
     max-width: 80%;
 }
 
-.skills-list ul {
+.skills-list>.skill-item {
     padding: 40px;
 }
 
-.skills-list ul li {
+.skills-list .skill-item .skill {
     display: inline-block;
-    margin: 5px 10px;
+    margin: 5px auto;
 }
 
+.skills-list .skill-item .skill-separator {
+    display: inline-block;
+    margin: 5px;
+}
 
 /*Contact Section Styling */
 div.contact-parent {
-    /* background-color: #DFB600; */
     display: grid;
     grid-template-columns: 30% 70%;
-    /* border: 1px solid; */
 }
 
 div.contact-left-container {
-    /* border: 1px solid; */
     max-width: 100%;
     max-height: 100%;
     padding: 2em;
@@ -224,7 +226,6 @@ div.contact-links {
     flex-wrap: wrap;
     overflow-x: auto;
     justify-content: space-evenly;
-    /* gap: 1em; */
     padding: 0.5em;
     max-width: 100%;
 }

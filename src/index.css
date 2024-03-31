@@ -48,7 +48,6 @@ body {
     z-index: 1000;
     top: 0;
     max-width: 100%;
-    /* overflow: auto; */
 }
 
 .header-icon {
@@ -60,24 +59,24 @@ body {
 @media screen and (max-width: 1800px) {
     .icon-container {
         padding: 0.8rem;
-        /* Adjust padding */
     }
 
     .header-icon {
         max-height: 3rem;
-        /* Adjust icon size */
     }
 }
 
 @media screen and (max-width: 1500px) {
     .icon-container {
         padding: 0.6rem;
-        /* Adjust padding */
     }
 
     .header-icon {
         max-height: 2.5rem;
-        /* Adjust icon size */
+    }
+
+    .navbar>ul {
+        font-size: 1.8em !important
     }
 }
 
@@ -85,12 +84,11 @@ body {
 @media screen and (max-width: 1200px) {
     .icon-container {
         padding: 0.4rem;
-        /* Adjust padding */
+
     }
 
     .header-icon {
         max-height: 2rem;
-        /* Adjust icon size */
     }
 
     .contact-image {
@@ -98,20 +96,18 @@ body {
         max-width: 6em;
     }
 
-    .navbar > ul {
-        font-size: 1.5em !important
+    .navbar>ul {
+        font-size: 1.6em !important
     }
 }
 
 @media screen and (max-width: 1000px) {
     .icon-container {
         padding: 0.4rem;
-        /* Further adjust padding */
     }
 
     .header-icon {
         max-height: 1.5rem;
-        /* Further adjust icon size */
     }
 
     .navbar {
@@ -128,16 +124,27 @@ body {
 
 
 @media screen and (max-width: 850px) {
-    .contact-image {
-        max-height: 3.5em;
-        max-width: 3.5em;
+    .navbar>ul {
+        font-size: 1.3em !important
+    }
 
+    div.contact-parent {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-image {
         margin-bottom: 1em;
     }
 
-    .navbar > ul  {
-        font-size: 1.3em !important
+    div.contact-links {
+        margin: auto;
     }
+
+    .message-container {
+        margin: auto;
+    }
+
 }
 
 @media screen and (max-width: 750px) {
@@ -149,10 +156,11 @@ body {
     }
 
     div.contact-links {
-        margin: 0;
+        margin: auto;
+        overflow: auto;
     }
 
-    .navbar > ul  {
+    .navbar>ul {
         font-size: 1em !important
     }
 }
@@ -161,12 +169,10 @@ body {
 @media screen and (max-width: 700px) {
     .icon-container {
         padding: 0.4rem;
-        /* Further adjust padding */
     }
 
     .header-icon {
         max-height: 1rem;
-        /* Further adjust icon size */
     }
 
     .navbar {
@@ -177,19 +183,17 @@ body {
 @media screen and (max-width: 500px) {
     .icon-container {
         padding: 0.4rem;
-        /* Further adjust padding */
     }
 
     .header-icon {
         max-height: 0.8rem;
-        /* Further adjust icon size */
     }
 
     .navbar {
         font-size: 0.6rem;
     }
 
-    .navbar > ul  {
+    .navbar>ul {
         padding-left: 4px !important;
     }
 }
@@ -197,21 +201,20 @@ body {
 @media screen and (max-width: 450px) {
     .icon-container {
         padding: 0.4rem;
-        /* Further adjust padding */
     }
 
     .header-icon {
         max-height: 0.6rem;
-        /* Further adjust icon size */
     }
 
     .navbar {
         font-size: 0.5rem;
     }
 
-    .navbar > ul  {
+    .navbar>ul {
         padding-left: 2px !important;
     }
+
 }
 
 
@@ -224,7 +227,7 @@ body {
     overflow: auto;
 }
 
-.navbar > ul {
+.navbar>ul {
     list-style-type: none;
     margin: 0;
     padding-left: 10px;
@@ -235,18 +238,15 @@ body {
     flex-wrap: wrap;
 }
 
-.navbar > ul li:hover {
+.navbar>ul li:hover {
     color: #DFB600;
     text-decoration: underline;
-    /* transform: scale(1.05); */
-    /* margin: 0 1rem; */
     cursor: pointer;
 }
 
 /*App Body Styles*/
 .parent {
     display: grid;
-    /* grid-auto-rows: auto; */
     grid-template-columns: 9% 91%;
 }
 
@@ -262,10 +262,6 @@ body {
     height: 100%;
     min-width: 100%;
 }
-
-/* #portfolio-body::-webkit-scrollbar {
-    width: 0;
-} */
 
 section {
     min-height: 100vh;
