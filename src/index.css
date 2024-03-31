@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Oswald:wght@200..700&display=swap');
+
+/*HTML Body Styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    max-width: 100%;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: #F6F6F8;
+    margin: 0;
+    max-width: 100%;
+}
+
+.title {
+    flex: 1;
+    font-size: 60px;
+    text-align: center;
+}
+
+.subtitle {
+    flex: 1;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+/* Navbar*/
+.icon-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    max-width: 100%;
+    /* overflow: auto; */
+}
+
+.header-icon {
+    max-height: 3.5rem;
+    max-width: 100%;
+}
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 1800px) {
+    .icon-container {
+        padding: 0.8rem;
+        /* Adjust padding */
+    }
+
+    .header-icon {
+        max-height: 3rem;
+        /* Adjust icon size */
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .icon-container {
+        padding: 0.6rem;
+        /* Adjust padding */
+    }
+
+    .header-icon {
+        max-height: 2.5rem;
+        /* Adjust icon size */
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .icon-container {
+        padding: 0.4rem;
+        /* Adjust padding */
+    }
+
+    .header-icon {
+        max-height: 2rem;
+        /* Adjust icon size */
+    }
+
+    .contact-image {
+        max-height: 6em;
+        max-width: 6em;
+    }
+
+    .navbar > ul {
+        font-size: 1.5em !important
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .icon-container {
+        padding: 0.4rem;
+        /* Further adjust padding */
+    }
+
+    .header-icon {
+        max-height: 1.5rem;
+        /* Further adjust icon size */
+    }
+
+    .navbar {
+        font-size: 0.8rem;
+    }
+
+    .contact-image {
+        max-height: 4.5em;
+        max-width: 4em;
+
+        margin-bottom: 1em;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .contact-image {
+        max-height: 3.5em;
+        max-width: 3.5em;
+
+        margin-bottom: 1em;
+    }
+
+    .navbar > ul  {
+        font-size: 1.3em !important
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .contact-image {
+        max-height: 3.5em;
+        max-width: 2.5em;
+
+        margin-bottom: 1em;
+    }
+
+    div.contact-links {
+        margin: 0;
+    }
+
+    .navbar > ul  {
+        font-size: 1em !important
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .icon-container {
+        padding: 0.4rem;
+        /* Further adjust padding */
+    }
+
+    .header-icon {
+        max-height: 1rem;
+        /* Further adjust icon size */
+    }
+
+    .navbar {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .icon-container {
+        padding: 0.4rem;
+        /* Further adjust padding */
+    }
+
+    .header-icon {
+        max-height: 0.8rem;
+        /* Further adjust icon size */
+    }
+
+    .navbar {
+        font-size: 0.6rem;
+    }
+
+    .navbar > ul  {
+        padding-left: 4px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .icon-container {
+        padding: 0.4rem;
+        /* Further adjust padding */
+    }
+
+    .header-icon {
+        max-height: 0.6rem;
+        /* Further adjust icon size */
+    }
+
+    .navbar {
+        font-size: 0.5rem;
+    }
+
+    .navbar > ul  {
+        padding-left: 2px !important;
+    }
+}
+
+
+.navbar {
+    color: #F6F6F8;
+    position: sticky;
+    z-index: 1000;
+    margin: 0;
+    top: 40%;
+    overflow: auto;
+}
+
+.navbar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.navbar > ul li:hover {
+    color: #DFB600;
+    text-decoration: underline;
+    /* transform: scale(1.05); */
+    /* margin: 0 1rem; */
+    cursor: pointer;
+}
+
+/*App Body Styles*/
+.parent {
+    display: grid;
+    /* grid-auto-rows: auto; */
+    grid-template-columns: 9% 91%;
+}
+
+.child-left {
+    background-color: #352FB4;
+    margin: 0;
+    height: 100%;
+    min-width: 100%;
+}
+
+#portfolio-body {
+    margin: 0;
+    height: 100%;
+    min-width: 100%;
+}
+
+/* #portfolio-body::-webkit-scrollbar {
+    width: 0;
+} */
+
+section {
+    min-height: 100vh;
+    align-content: center;
+}
+
+section:nth-child(even) {
+    background-color: #EFF1F8;
+    color: #575784;
+}
+
+section:nth-child(odd) {
+    color: #1D1B3C;
+}
