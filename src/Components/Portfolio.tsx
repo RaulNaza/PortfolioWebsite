@@ -1,8 +1,9 @@
 import github from '../assets/github.png'
-import site from  '../assets/Site.png'
+import site from '../assets/Site.png'
 import phonebook from '../assets/Phonebook.png'
 import movie from '../assets/MovieReview.png'
 import tictactoe from '../assets/TicTacToe.png'
+import todo from '../assets/ToDo.png'
 
 function Portfolio() {
 
@@ -17,7 +18,7 @@ function Portfolio() {
     const listOfProjects: Array<Project> = [
         {
             title: "Phonebook",
-            description: "This Phonebook web application allows you to keep an online log of your current contacts.",
+            description: "This web-based Phonebook application provides users with the ability to maintain an organized digital repository of their contacts.",
             link: "https://github.com/RaulNaza/Phonebook",
             demo: "https://main.d1objhoedxwde0.amplifyapp.com/",
             img: phonebook
@@ -33,14 +34,21 @@ function Portfolio() {
             title: "Tic-Tac-Toe Game",
             description: "Classic game of Tic-Tac-Toe.",
             link: "https://github.com/RaulNaza/Tic-Tac-Toe",
-            demo: "No Demo Available",
+            demo: "",
             img: tictactoe
+        },
+        {
+            title: "Organizer",
+            description: "This application is a traditional ToDo tool designed to help users create and manage tasks efficiently.",
+            link: "https://github.com/RaulNaza/Tic-Tac-Toe",
+            demo: "",
+            img: todo
         }
     ];
 
     return (
         <div className="section-container" id='Portfolio'>
-            <span className="subtitle">Portfolios</span>
+            <span className="subtitle">Portfolio</span>
             <div className="portfolio-container">
                 {
                     listOfProjects.map((project, index) => (
@@ -72,7 +80,11 @@ function Portfolio() {
                                         <img
                                             src={site}
                                             alt="github-icon" />
-                                        {'Demo Website'}
+                                        {
+                                            project.demo !== "" ?
+                                            "Demo Website":
+                                            "Demo Website Pending... "
+                                        }
                                     </a>
                                 </div>
                             </div>
