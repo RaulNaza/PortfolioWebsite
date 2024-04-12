@@ -34,13 +34,13 @@ function Portfolio() {
             title: "Tic-Tac-Toe Game",
             description: "Classic game of Tic-Tac-Toe.",
             link: "https://github.com/RaulNaza/Tic-Tac-Toe",
-            demo: "",
+            demo: "https://main.dl2ws9bk5d6qn.amplifyapp.com/",
             img: tictactoe
         },
         {
             title: "Organizer",
             description: "This application is a traditional ToDo tool designed to help users create and manage tasks efficiently.",
-            link: "https://github.com/RaulNaza/Tic-Tac-Toe",
+            link: "https://github.com/RaulNaza/Organizer",
             demo: "",
             img: todo
         }
@@ -82,8 +82,8 @@ function Portfolio() {
                                             alt="github-icon" />
                                         {
                                             project.demo !== "" ?
-                                            "Demo Website":
-                                            "Demo Website Pending... "
+                                                "Demo Website" :
+                                                "Demo Website Pending... "
                                         }
                                     </a>
                                 </div>
