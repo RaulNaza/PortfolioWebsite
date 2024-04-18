@@ -47,21 +47,21 @@ function Portfolio() {
     ];
 
     return (
-        <div className="section-container" id='Portfolio'>
-            <span className="subtitle">Portfolio</span>
-            <div className="portfolio-container">
+        <div className="container">
+            <h2 className="subtitle">Portfolio</h2>
+            <div className="portfolio">
                 {
                     listOfProjects.map((project, index) => (
-                        <div className="project-container" key={index}>
+                        <div className="project-card" key={index}>
                             <img src={project.img} alt={project.title} />
                             <div className="project-body">
-                                <span className="project-title">
+                                <p className="project-title">
                                     {project.title}
-                                </span>
-                                <span className="project-description">
+                                </p>
+                                <p className="project-description">
                                     {project.description}
-                                </span>
-                                <div className="link-container-project">
+                                </p>
+                                <div className="container links">
                                     <a
                                         className="project-link"
                                         href={project.link}

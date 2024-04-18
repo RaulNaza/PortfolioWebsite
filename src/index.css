@@ -1,278 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Oswald:wght@200..700&display=swap');
 
-/*HTML Body Styles */
-* {
-    padding: 0;
-    margin: 0;
+:root {
+    --primary-color: #0066e7;
+    --secondary-color: #8aa3c3;
+    --accent-color: #feca18;
+    --border-color: #090909;
+    --background-color: #fefefe;
 }
 
-html {
+* {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: 20px;
-    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
 }
 
 html::-webkit-scrollbar {
     width: 0;
 }
 
-body {
-    background-color: #F6F6F8;
-    margin: 0;
-    max-width: 100%;
-}
-
 .title {
-    flex: 1;
-    font-size: 60px;
+    font-size: 3rem;
     text-align: center;
 }
 
 .subtitle {
-    flex: 1;
-    font-size: 40px;
-    margin-bottom: 2rem;
+    font-size: 2rem;
     text-align: center;
-}
-
-
-/* Navbar*/
-.icon-container {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    position: sticky;
-    z-index: 1000;
-    top: 0;
-    max-width: 100%;
-}
-
-.header-icon {
-    max-height: 3.5rem;
-    max-width: 100%;
-}
-
-/* Adjust styles for smaller screens */
-@media screen and (max-width: 1800px) {
-    .icon-container {
-        padding: 0.8rem;
-    }
-
-    .header-icon {
-        max-height: 3rem;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .icon-container {
-        padding: 0.6rem;
-    }
-
-    .header-icon {
-        max-height: 2.5rem;
-    }
-
-    .navbar>ul {
-        font-size: 1.8em !important
-    }
-}
-
-
-@media screen and (max-width: 1200px) {
-    .icon-container {
-        padding: 0.4rem;
-
-    }
-
-    .header-icon {
-        max-height: 2rem;
-    }
-
-    .contact-image {
-        max-height: 6em;
-        max-width: 6em;
-    }
-
-    .navbar>ul {
-        font-size: 1.6em !important
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .icon-container {
-        padding: 0.4rem;
-    }
-
-    .header-icon {
-        max-height: 1.5rem;
-    }
-
-    .navbar {
-        font-size: 0.8rem;
-    }
-
-    .contact-image {
-        max-height: 4.5em;
-        max-width: 4em;
-
-        margin-bottom: 1em;
-    }
-}
-
-
-@media screen and (max-width: 850px) {
-    .navbar>ul {
-        font-size: 1.3em !important
-    }
-
-    div.contact-parent {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .contact-image {
-        margin-bottom: 1em;
-    }
-
-    div.contact-links {
-        margin: auto;
-    }
-
-    .message-container {
-        margin: auto;
-    }
-
-}
-
-@media screen and (max-width: 750px) {
-    .contact-image {
-        max-height: 3.5em;
-        max-width: 2.5em;
-
-        margin-bottom: 1em;
-    }
-
-    div.contact-links {
-        margin: auto;
-        overflow: auto;
-    }
-
-    .navbar>ul {
-        font-size: 1em !important
-    }
-}
-
-
-@media screen and (max-width: 700px) {
-    .icon-container {
-        padding: 0.4rem;
-    }
-
-    .header-icon {
-        max-height: 1rem;
-    }
-
-    .navbar {
-        font-size: 0.6rem;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .icon-container {
-        padding: 0.4rem;
-    }
-
-    .header-icon {
-        max-height: 0.8rem;
-    }
-
-    .navbar {
-        font-size: 0.6rem;
-    }
-
-    .navbar>ul {
-        padding-left: 4px !important;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .icon-container {
-        padding: 0.4rem;
-    }
-
-    .header-icon {
-        max-height: 0.6rem;
-    }
-
-    .navbar {
-        font-size: 0.5rem;
-    }
-
-    .navbar>ul {
-        padding-left: 2px !important;
-    }
-
-}
-
-
-.navbar {
-    color: #F6F6F8;
-    position: sticky;
-    z-index: 1000;
-    margin: 0;
-    top: 40%;
-    overflow: auto;
-}
-
-.navbar>ul {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 10px;
-    cursor: pointer;
-    font-size: 2em;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.navbar>ul li:hover {
-    color: #DFB600;
-    text-decoration: underline;
-    cursor: pointer;
+    margin: 10px 0;
 }
 
 /*App Body Styles*/
-.parent {
+.wrapper {
     display: grid;
-    grid-template-columns: 9% 91%;
+    grid-template-columns: min-content auto;
 }
 
-.child-left {
-    background-color: #352FB4;
-    margin: 0;
-    height: 100%;
-    min-width: 100%;
+@media (width <=1090px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: min-content auto;
+    }
+
+    div.container.navigation {
+        background-color: var(--primary-color);
+        align-content: normal;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav.navbar {
+        padding: 10px;
+        margin: 0 10px;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+        li {
+            color: var(--background-color);
+            list-style: none;
+            font-size: 1.4rem;
+            margin: 5px;
+        }
+
+        li:hover {
+            color: var(--accent-color);
+        }
+    }
+
+    main.main-container {
+        align-content: normal;
+    }
+
+    .message {
+        background-color: var(--background-color);
+        border: 0;
+    }
+
+    .link-container {
+        a {
+            color: var(--border-color);
+            text-decoration: none;
+        }
+    }
+
+
+    form>p {
+        color: var(--border-color);
+    }
+
+    .message-input>label {
+        color: var(--border-color);
+    }
 }
 
-#portfolio-body {
-    margin: 0;
-    height: 100%;
-    min-width: 100%;
+.navigation-container {
+    background-color: var(--primary-color);
+    display: grid;
 }
 
-section {
-    min-height: 100vh;
+.main-container {
+    height: 100vh;
+    background-color: var(--background-color);
+    display: grid;
     align-content: center;
 }
 
-section:nth-child(even) {
-    background-color: #EFF1F8;
-    color: #575784;
+section {
+    background-color: var(--background-color);
+    height: min-content;
 }
 
-section:nth-child(odd) {
-    color: #1D1B3C;
+.container {
+    color: var(--border-color);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+/* Navbar*/
+.navbar {
+    padding: 0 10px;
+    justify-items: center;
+
+    align-self: center;
+
+    li {
+        font-size: 2rem;
+        color: var(--background-color);
+    }
+
+    li:hover {
+        color: var(--accent-color);
+        cursor: pointer;
+    }
 }

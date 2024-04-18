@@ -18,12 +18,7 @@ function Message() {
         if (name === "" || name === "Please provide a name.") {
             setName('Please provide a name.');
         } else {
-            console.log('Submit');
-            console.log('name: ', name);
-            console.log('email: ', email);
-            console.log('message: ', message);
-
-            try {
+                try {
                 const messageObject = {
                     name: name,
                     email: email,
@@ -42,8 +37,8 @@ function Message() {
     }
 
     return (
-        <div className="contact-parent">
-            <div className="contact-left-container">
+        <div className="container">
+            <div className="message" id="Message">
                 <div className='contact-card'>
                     <img className='contact-image' src={photo} alt='photo of author' />
                     <div className='contact-links'>
@@ -86,39 +81,35 @@ function Message() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="contact-right-container">
-                <div className="message-container" id="Message">
+                <form>
                     <p>Leave me a message!</p>
-                    <form>
-                        <div className="message-heading">
-                            <div className="message-input">
-                                <label htmlFor="name">Name:</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    onChange={(event) => setName(event.target.value)}
-                                    value={name}></input>
-                            </div>
-                            <div className="message-input">
-                                <label htmlFor="email">Email:</label>
-                                <input
-                                    type="text"
-                                    id="email"
-                                    onChange={(event) => setEmail(event.target.value)}
-                                    value={email}></input>
-                            </div>
+                    <div className="message-heading">
+                        <div className="message-input">
+                            <label htmlFor="name">Name:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                onChange={(event) => setName(event.target.value)}
+                                value={name}></input>
                         </div>
-                        <textarea
-                            name="message"
-                            placeholder="Look forward to your message!"
-                            minLength={1}
-                            onChange={(event) => setMessage(event.target.value)}
-                            value={message}>
-                        </textarea >
-                        <button type="submit" onClick={(event) => handleSubmit(event)}>Submit</button>
-                    </form>
-                </div>
+                        <div className="message-input">
+                            <label htmlFor="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                onChange={(event) => setEmail(event.target.value)}
+                                value={email}></input>
+                        </div>
+                    </div>
+                    <textarea
+                        name="message"
+                        placeholder="Look forward to your message!"
+                        minLength={1}
+                        onChange={(event) => setMessage(event.target.value)}
+                        value={message}>
+                    </textarea >
+                    <button type="submit" onClick={(event) => handleSubmit(event)}>Submit</button>
+                </form>
             </div>
         </div>
     )
